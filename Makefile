@@ -1,6 +1,6 @@
 include Make.defines
 
-PROGS =	 ex2
+PROGS =	 hw1
 
 OPTIONS = -DUNIX  -DANSI
 
@@ -21,6 +21,10 @@ ex2:		exampleUnixTime.o $(CPLUSOBJECTS) $(COBJECTS) $(LIBS) $(COMMONSOURCES) $(S
 		${CC} ${LINKOPTIONS}  $@ exampleUnixTime.o $(CPLUSOBJECTS) $(COBJECTS) $(LIBS) $(LINKFLAGS)
 
 
+hw1:		hw1.o $(CPLUSOBJECTS) $(COBJECTS) $(LIBS) $(COMMONSOURCES) $(SOURCES)
+		${CC} ${LINKOPTIONS}  $@ hw1.o $(CPLUSOBJECTS) $(COBJECTS) $(LIBS) $(LINKFLAGS)
+
+
 .cc.o:	$(HEADERS)
 	$(CPLUS) $(CPLUSFLAGS) $(OPTIONS) $<
 
@@ -30,10 +34,10 @@ ex2:		exampleUnixTime.o $(CPLUSOBJECTS) $(COBJECTS) $(LIBS) $(COMMONSOURCES) $(S
 
 
 backup:
-	rm -f ex2.tar
-	rm -f ex2.tar.gz
-	tar -cf ex2.tar *
-	gzip -f ex2.tar
+	rm -f hw1.tar
+	rm -f hw1.tar.gz
+	tar -cf hw1.tar *
+	gzip -f hw1.tar
 
 clean:
 		rm -f ${PROGS} ${CLEANFILES}
