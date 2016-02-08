@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
   unsigned int iters = atoi(argv[1]); //Purposefully not validating input
   unsigned int bs = atoi(argv[2]);
   int sum;
-  unsigned short *block = NULL;
+  unsigned char *block = NULL;
 
   /* initialize RNG */
   srand(time(NULL));
@@ -41,13 +41,13 @@ int main(int argc, char *argv[])
   sigaction (SIGALRM, &sig, NULL);
   
   /* allocate and initialize data block */
-  block = (unsigned short*)malloc(sizeof(unsigned short) * bs);
-  memset(block,rand()%256,sizeof(unsigned short)*bs);
+  block = (unsigned char*)malloc(sizeof(unsigned char) * bs);
+  memset(block,rand()%256,sizeof(unsigned char)*bs);
 	
   while (k < iters) 
   {
     t = getTime();
-    sum = csum(block, bs);
+    sum = csum((unsigned short*)block, bs);
     t = getTime() - t;	
     printf("%3.7f 0X%xd \n",t,sum);
     k++;
