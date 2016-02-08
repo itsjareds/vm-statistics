@@ -2,7 +2,8 @@
 
 Here is a plot using blocksize 1000000:
 
-![blocksize 1m plot](images/q2/hw1-1000000.png)
+![blocksize 1m
+plot](https://github.com/itsjareds/vm-statistics/raw/master/images/q2/hw1-1000000.png)
 
 `runExp.sh`
 
