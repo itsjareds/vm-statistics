@@ -1,5 +1,9 @@
 # Homework 1 analysis
 
+Here is a plot using blocksize 1000000:
+
+![blocksize 1m plot](images/q2/hw1-1000000.png)
+
 `runExp.sh`
 
 ```bash
