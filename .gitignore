@@ -7,3 +7,9 @@ hw1
 *.dat
 *.out
 octave-workspace
+*.aux
+*.dvi
+*.log
+*.lol
+*.toc
+_minted-paper
