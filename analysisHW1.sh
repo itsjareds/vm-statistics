@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ $# -ne 3 ]; then
+if [[ $# -ne 3 ]]; then
   echo "Invalid parameters."
   echo "Syntax: $0 [baseDataFilename] [resultsDirectory] [resultsFile]"
   exit 1
@@ -20,8 +20,6 @@ echo "Enter experiment name:"
 read name
 echo "Experiment $name" >> ${dir}/${out}
 
-set -x
 for f in ${dir}/${base}.*; do
   sort -n $f | awk -f analyzeResults.awk scale=${f##*.} >> ${dir}/${out}
 done 
-set +x
