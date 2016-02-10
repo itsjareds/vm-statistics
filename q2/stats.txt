@@ -1,0 +1,19 @@
+BS=4
+plotDataPDF (nargin:1):  sampleSize:1000000, maxValue:65.100000,  MAX_ALLOWED_VALUE:1000.000000
+#samples:1000000 Mean:     0 microseconds,  median:      0,  std:      0, max:    65, min:     0, maxCount:10173 zeroCnt:947490
+percentiles (2.5 25 50 75 97.5): :     0      0      0      0      1
+
+BS=256
+plotDataPDF (nargin:1):  sampleSize:1000000, maxValue:70.100000,  MAX_ALLOWED_VALUE:1000.000000
+#samples:1000000 Mean:     0 microseconds,  median:      0,  std:      0, max:    70, min:     0, maxCount:235 zeroCnt:865266
+percentiles (2.5 25 50 75 97.5): :     0      0      0      0      1
+
+BS=65535
+plotDataPDF (nargin:1):  sampleSize:1000000, maxValue:4635.100000,  MAX_ALLOWED_VALUE:1000.000000
+#samples:1000000 Mean:    16 microseconds,  median:     15,  std:      7, max:  4635, min:    12, maxCount:22358 zeroCnt:0
+percentiles (2.5 25 50 75 97.5): :    14     15     15     16     26
+
+BS=1000000
+plotDataPDF (nargin:1):  sampleSize:1000000, maxValue:5667.200000,  MAX_ALLOWED_VALUE:1000.000000
+#samples:1000000 Mean:   255 microseconds,  median:    236,  std:     51, max:  5667, min:   210, maxCount:24825 zeroCnt:0
+percentiles (2.5 25 50 75 97.5): :   223    224    236    263    395
